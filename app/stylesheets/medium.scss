@@ -1,0 +1,47 @@
+.titre_1 {
+  font-size: 16px; }
+
+.titre_2 {
+  font-size: 13px; }
+
+.normal {
+  font-size: 12px; }
+
+.petitText {
+  font-size: 11px; }
+
+.note {
+  font-size: 10px; }
+
+.evidence_petitText {
+  font-size: 11px; }
+
+.tailleTexte {
+  font-size: 12px; }
+
+tailleTexte {
+  a, p, table {
+    font-size: 12px; } }
+
+a.liensIntra {
+  font-size: 12px; }
+
+ol.lienQuestion {
+  font-size: 11px; }
+
+a {
+  &.liensQuestion {
+    font-size: 11px; }
+  &.lienNouvellesBulletin {
+    font-size: 13px; }
+  &.touteLesNouvelles {
+    font-size: 12px; } }
+
+.grandTitre {
+  font-size: 15px; }
+
+.bulletin_centre_entete {
+  font-size: 12px; }
+
+.bulletin_droite_date {
+  font-size: 13px; }

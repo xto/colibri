@@ -1,0 +1,77 @@
+/* line 1, ../../../app/stylesheets/small.scss */
+.titre_1 {
+  font-size: 15px;
+}
+
+/* line 4, ../../../app/stylesheets/small.scss */
+.titre_2 {
+  font-size: 12px;
+}
+
+/* line 7, ../../../app/stylesheets/small.scss */
+.normal {
+  font-size: 11px;
+}
+
+/* line 10, ../../../app/stylesheets/small.scss */
+.petitText {
+  font-size: 10px;
+}
+
+/* line 13, ../../../app/stylesheets/small.scss */
+.note {
+  font-size: 9px;
+}
+
+/* line 16, ../../../app/stylesheets/small.scss */
+.evidence_petitText {
+  font-size: 10px;
+}
+
+/* line 19, ../../../app/stylesheets/small.scss */
+.tailleTexte {
+  font-size: 11px;
+}
+
+/* line 23, ../../../app/stylesheets/small.scss */
+tailleTexte a, tailleTexte p, tailleTexte table {
+  font-size: 11px;
+}
+
+/* line 26, ../../../app/stylesheets/small.scss */
+a.liensIntra {
+  font-size: 11px;
+}
+
+/* line 29, ../../../app/stylesheets/small.scss */
+ol.lienQuestion {
+  font-size: 10px;
+}
+
+/* line 33, ../../../app/stylesheets/small.scss */
+a.liensQuestion {
+  font-size: 10px;
+}
+/* line 35, ../../../app/stylesheets/small.scss */
+a.lienNouvellesBulletin {
+  font-size: 12px;
+}
+/* line 37, ../../../app/stylesheets/small.scss */
+a.touteLesNouvelles {
+  font-size: 11px;
+}
+
+/* line 40, ../../../app/stylesheets/small.scss */
+.grandTitre {
+  font-size: 14px;
+}
+
+/* line 43, ../../../app/stylesheets/small.scss */
+.bulletin_centre_entete {
+  font-size: 11px;
+}
+
+/* line 46, ../../../app/stylesheets/small.scss */
+.bulletin_droite_date {
+  font-size: 12px;
+}

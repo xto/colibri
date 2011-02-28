@@ -1,0 +1,70 @@
+.titre_1 {
+  font-weight: bold;
+  color: #336699; }
+
+.titre_2 {
+  color: #336699;
+  font-weight: bold; }
+
+.normal {
+  font-size: 11px; }
+
+.note {
+  color: #999999; }
+
+.evidence, .evidence_petitText {
+  color: #666666;
+  font-weight: bold; }
+
+.sousTitre {
+  font-weight: bold; }
+
+table {
+  &.tableauDefaut {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+    tr td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 4px; } }
+  &.tableauSansBordure {
+    border-collapse: collapse;
+    padding: 4px;
+    tr {
+      border-collapse: collapse;
+      padding: 4px;
+      td {
+        border-collapse: collapse;
+        padding: 4px; } } } }
+
+.grandTitre {
+  font-weight: bold; }
+
+.waDescription {
+  font-size: 12px;
+  color: #333333;
+  font-weight: bold; }
+
+.waTabDemande {
+  background-color: #e2e6e9;
+  padding: 10px;
+  padding-right: 0; }
+
+.waTitreChamp {
+  font-size: 12px;
+  color: black; }
+
+.waSousTitreChamp {
+  font-size: 10px;
+  color: black; }
+
+.waLegend {
+  color: #CC0000;
+  font-size: 11px;
+  vertical-align: top;
+  line-height: 13px; }
+
+.waErreur {
+  color: #CC0000;
+  font-size: 11px; }

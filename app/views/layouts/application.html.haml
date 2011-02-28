@@ -1,0 +1,221 @@
+%html
+  %head
+    %title
+      Bureau des bourses et de l'aide financi&egrave;re - R&eacute;pertoire de bourses
+    %meta{:content => "index,follow", :name => "robots"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag 'compiled/default.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/theme.css', :media => 'screen, projection'
+
+    = stylesheet_link_tag 'compiled/small.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/medium.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/large.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/theme4.css', :media => 'screen, projection'
+    
+  %body
+    %table.centrerPage{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0"}
+      %tr
+        %td
+          #overAll.tout
+            %a{:name => "haut"}
+            #contenu
+              #bordureTout
+                #bandeau
+                  / ulaval banner (start)
+                  %table.bandUl{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+                    %tr
+                      %td{:colspan => "3"}
+                        %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+                          %tr
+                            %td
+                              / IE HACK ici
+                              %img{:alt => "", :border => "0", :height => "10", :src => "/images/pix_rouge_ul.gif", :style => "width:570px;_width:568px;"}/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "10", :src => "/images/pix.gif", :width => "2"}/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "10", :src => "/images/pix_jaune_ul.gif", :width => "190"}/
+                    %tr
+                      %td{:valign => "top"}
+                        %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+                          %tr
+                            %td
+                              %img{:alt => "", :border => "0", :height => "46", :src => "/images/pix.gif", :width => "15"}/
+
+                            %td
+                              %img{:alt => "", :border => "0", :height => "10", :src => "/images/pix.gif"}/
+
+                              %a{:href => "/sgc/bbaf"}
+                                %img{:alt => "", :border => "0", :src => "/images/titreBandeau.gif"}/
+                      %td
+                        %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "1"}/
+
+                      %td{:rowspan => "2"}
+                        %img{:alt => "", :border => "0", :height => "10", :src => "/images/pix.gif", :width => "1"}/
+                        %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+                          %tr
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "146"}
+                              %br
+                              %a.bandContent1{:href => "http://www.ulaval.ca", :target => "_blank"}
+                                %img{:alt => "Université Laval", :border => "0", :src => "/images/band-ulaval-logo.gif"}
+                              
+                    %tr
+                      %td{:valign => "bottom"}
+                        %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+                          %tr
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix.gif", :width => "17"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix_gris.gif", :width => "1"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "5"}/
+                              %br/
+                            %td{:align => "left", :valign => "top"}
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "80"}/
+                              %br/
+                              %a.bandeau{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf"} Accueil
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix_gris.gif", :width => "1"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "5"}/
+                              %br/
+                            %td{:align => "left", :valign => "top"}
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "80"}/
+                              %br/
+                              %a.bandeau{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/pid/6532", :title => "&Agrave; propos"} &Agrave; propos
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix_gris.gif", :width => "1"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "5"}/
+                              %br/
+                            %td{:align => "left", :valign => "top"}
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "80"}/
+                              %br/
+                              %a.bandeau{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/joindre", :title => "Nous joindre"} Nous joindre
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix_gris.gif", :width => "1"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "5"}/
+                              %br/
+                            %td{:align => "left", :valign => "top"}
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "80"}/
+                              %br/
+                              %a.bandeau{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/repertoire/engineName/sitemap?matrix=1298918689381&sitemap=1"} Plan du site
+                            %td
+                              %img{:alt => "", :border => "0", :height => "14", :src => "/images/pix_gris.gif", :width => "1"}/
+                              %br/
+                            %td
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "5"}/
+                              %br/
+                            %td{:align => "left", :valign => "top"}
+                              %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "80"}/
+                              %br/
+                              %a.bandeau{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/chercher"} Chercher
+                      %td
+                        %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix.gif", :width => "1"}/
+                        %br/
+                    %tr
+                      %td{:colspan => "3"}
+                        %img{:alt => "", :border => "0", :height => "1", :src => "/images/pix_gris.gif", :width => "760"}/
+                        %br/
+                  / ulaval banner (end)
+                / Fin div#bandeau
+                / header (end)
+                
+                #contenuCentral
+                  %table.conteneurBordure
+                    %tr
+                      %td.degraderGauche
+                        \&nbsp;
+                      %td
+                        #outils
+                          %table.outils
+                            %tr
+                              %td
+                                %a{:href => "javascript:setStyleSheetSize('bigger');", :title => "Augmenter la taille du texte"}
+                                  %img#toolbar_larger.imageSansBordure.imageBlock{:alt => "Augmenter la taille du texte", :onmouseout => "switchImgTool ('toolbar_larger','toolbar_larger_off');", :onmouseover => "switchImgTool ('toolbar_larger','toolbar_larger_on');", :src => "/images/plus.gif"}/
+                              %td
+                                %a{:href => "javascript:setStyleSheetSize('smaller');", :title => "Diminuer la taille du texte"}
+                                  %img#toolbar_smaller.imageSansBordure.imageBlock{:alt => "Diminuer la taille du texte", :onmouseout => "switchImgTool ('toolbar_smaller','toolbar_smaller_off');", :onmouseover => "switchImgTool ('toolbar_smaller','toolbar_smaller_on');", :src => "/images/moins_over.gif"}/
+                              %td.toolbarText
+                                Taille du texte&nbsp;&nbsp;&nbsp;
+                              %td
+                                %a.lienFonction{:href => "#", :onclick => "OpenWindow('/jsp/jahia/templates/bbaf/bbaf/courriel.jsp?titreSite=Bureau des bourses et de l\\'aide financière&titreDePage=R&eacute;pertoire de bourses&langue=fr_CA','','Envoyerbulletin',370, 380);", :title => "Partager cette page"}
+                                  %img#toolbarSend.imageSansBordure{:alt => "Partager cette page", :onmouseout => "switchImage('toolbarSend','/images/toolbar/theme4/envelope.gif'); switchClassName('lienToolbarSend','lienFonction');", :onmouseover => "switchImage('toolbarSend','/images/toolbar/theme4/envelope_over.gif'); switchClassName('lienToolbarSend','lienFonctionHover');", :src => "/images/envelope.gif"}/
+                              %td.toolbarText
+                                %a#lienToolbarSend.lienFonction{:href => "#", :onclick => "OpenWindow('/jsp/jahia/templates/bbaf/bbaf/courriel.jsp?titreSite=Bureau des bourses et de l\\'aide financière&titreDePage=R&eacute;pertoire de bourses&langue=fr_CA','','Envoyerbulletin',370, 380);", :onmouseout => "switchImage('toolbarSend','/images/toolbar/theme4/envelope.gif');", :onmouseover => "switchImage('toolbarSend','/images/toolbar/theme4/envelope_over.gif');", :title => "Partager cette page"}
+                                  envoyer à un ami
+                                \&nbsp;&nbsp;&nbsp;
+                              %td
+                                %a.lienFonction{:href => "/sgc/bbaf/repertoire/cache/bypass?print=1", :target => "_blank", :title => "Imprimer"}
+                                  %img#toolbarPrint.imageSansBordure{:alt => "Imprimer", :onmouseout => "switchImage('toolbarPrint','/images/toolbar/theme4/imprimante.gif');", :onmouseover => "switchImage('toolbarPrint','/images/toolbar/theme4/imprimante_over.gif');", :src => "/images/imprimante.gif"}/
+                              %td.toolbarText
+                                %a.lienFonction{:href => "/sgc/bbaf/repertoire/cache/bypass?print=1", :onmouseout => "switchImage('toolbarPrint','/images/toolbar/theme4/imprimante.gif');", :onmouseover => "switchImage('toolbarPrint','/images/toolbar/theme4/imprimante_over.gif');", :target => "_blank", :title => "Imprimer"}
+                                  Imprimer
+                        / colonne qui flotte a gauche
+                        #colonneGauche
+                          .wraperGauche
+                            %table#element28291.menu_Niveau2_false{:border => "0px", :cellpadding => "0px", :cellspacing => "0px", :onmouseout => "switchClassName('element28291', 'menu_Niveau2_false'); switchClassName('lien28291', 'menu_Niveau2_false'); switchImage('puce28291', '/images/menu/theme4/puce_menu_n2_false.gif');", :onmouseover => "switchClassName('element28291', 'menu_Niveau2_over'); switchClassName('lien28291', 'menu_Niveau2_over'); switchImage('puce28291', '/images/menu/theme4/puce_menu_n2_over.gif');"}
+                              %tr
+                                %td{:style => "width:150px;"}
+                                  %a#lien28291.menu_Niveau2_false{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/repertoire/pid/8149", :title => "Premier cycle"}
+                                    Premier cycle
+                                %td.puce_Niveau2_false
+                                  %img#puce28291.puceMenu{:align => "absmiddle", :alt => "", :border => "0", :src => "/images/puce_menu_n2_false.gif"}/
+                            
+                        #colonneCentreSection
+                          = yield :colonneCentreSection
+
+                #surPiedDePage
+                  .lienSurPied
+                    %table.lienSurPied
+                      %tr
+                        %td.lienSurPied
+                          \&nbsp;&nbsp;&nbsp;&nbsp;
+                          %a.lienSurPied{:href => "http://www.sae.ulaval.ca/", :title => "Une unit&eacute; de la Direction des services aux &eacute;tudiants"} Une unit&eacute; de la Direction des services aux &eacute;tudiants
+                  %table.texteSurPied
+                    %tr
+                      %td.texteSurPied
+                        %div
+                          %strong
+                            %span.textPiedPage
+                              %span.textPiedPage Bureau des bourses et de l'aide financi&egrave;re (BBAF)
+                        %div
+                          %div
+                            %span.textPiedPage
+                              %span.textPiedPage
+                                Pavillon Alphonse-Desjardins
+                                = succeed "2325," do
+                                  %br/
+                                rue de l’Universit&eacute;, local 2546
+                                = succeed "Qu&amp;eacute;bec" do
+                                  %br/
+                                (Qu&eacute;bec)&nbsp; G1V 0A6
+                      %td.texteSurPied
+                        %div
+                          %span.textPiedPage
+                            %span.textPiedPage T&eacute;l&eacute;phone : 418
+                            %span.textPiedPage
+                              %strong
+                                %span.petitText 656-3332
+                        %div
+                          %span.textPiedPage
+                            %span.textPiedPage
+                              T&eacute;l&eacute;copieur: 418
+                              %strong 656-7775
+                          %div
+                            %div
+                              %a{:href => "http://www.bbaf.ulaval.ca/sgc/site/bbaf/pid/12375"} Pour nous joindre par courriel
+              / fin de a div bordureTout
+              #piedDePage
+                / La clé flotte à droite
+                .clePied
+                  %a{:href => "javascript:window.location='https://www.bbaf.ulaval.ca/sgc/bbaf/repertoire';OpenJahiaWindow('/sgc/bbaf/repertoire/engineName/login?matrix=1298918689527&redirectUrl=http://www.bbaf.ulaval.ca/sgc/bbaf/repertoire','Login',380,270);", :title => "Accès&nbsp;r&eacute;serv&eacute;"}
+                    %img{:alt => "Acc&eagrave;s&nbsp;r&eacute;serv&eacute;", :border => "0", :src => "/images/footer-key.gif"}
+                    
+                

@@ -1,0 +1,60 @@
+.titre_1 {
+  font-weight: bold;
+  color: #333333; }
+
+.titre_2 {
+  color: #666666;
+  font-weight: bold; }
+
+td {
+  &.degraderGauche, &.degraderDroite {
+    background-image: url(/images/degraderBordure.gif);
+    background-color: #6e777d; } }
+
+div#outils {
+  background-image: url(/images/degraderToolbar.gif); }
+
+td.toolbarText {
+  color: white; }
+
+a {
+  &.lienFonction {
+    color: white;
+    &:visited {
+      color: white; }
+    &:hover {
+      color: #cccccc; } }
+  &.lienFonctionHover {
+    color: #cccccc;
+    text-decoration: none;
+    &:hover, &:visited {
+      color: #cccccc;
+      text-decoration: none; } } }
+
+div#surPiedDePage, .corpsBoiteDroite {
+  background-color: #6e777d; }
+
+.coinBasGauche_BoiteDroite {
+  background-image: url(/images/boiteDroite/theme4/coinBasGauche_BoiteDroite.gif); }
+
+.basCentre_BoiteDroite {
+  background-image: url(/images/boiteDroite/theme4/basCentre_BoiteDroite.gif); }
+
+.coinBasDroit_BoiteDroite {
+  background-image: url(/images/boiteDroite/theme4/coinBasDroit_BoiteDroite.gif); }
+
+ol.lienQuestion {
+  color: #333333;
+  font-weight: bold; }
+
+a.lienQuestion {
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+  &:visited {
+    color: #333333;
+    font-weight: bold;
+    text-decoration: none; }
+  &:hover {
+    color: #999999;
+    text-decoration: underline; } }
