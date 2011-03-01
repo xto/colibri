@@ -37,20 +37,20 @@ table, tr, td {
   border: 0; }
 
 .centrerPage {
-  width: 762px;
-  margin: auto; }
+  width: 75%;
+  margin: auto;
+  }
 
 .tout {}
 
 div {
   &#menuAdmin {}
   &#bordureTout {
-    width: 762px;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc; }
   &#bandeau {
     background-color: white;
-    width: 760px; }
+  }
   &#contenu {
     background-color: white; }
   &#entete {
@@ -309,15 +309,17 @@ div#outils {
   margin-bottom: 2px;
   margin-left: 6px;
   margin-right: 6px;
-  padding-left: 209px;
   background-position: right;
   background-image: url(/images/degraderToolbar.gif);
-  background-repeat: repeat-y;
+  background-repeat: repeat-y repeat-x;
   font-size: 10px;
-  height: 24px; }
+  height: 24px;
+  text-align:center;
+}
 
 table.outils {
   height: 100%;
+
   td {
     vertical-align: middle;
     padding-right: 3px; } }

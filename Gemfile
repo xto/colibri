@@ -33,5 +33,5 @@ group :development, :test do
   gem 'rcov'
   gem 'rspec-rails-matchers'
   gem "rspec-rails"
-  gem 'builder'
+  gem 'builder', "~> 2.1.2"
 end

@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-PlatinumBuzzard::Application.load_tasks
+Colibri::Application.load_tasks

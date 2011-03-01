@@ -89,7 +89,7 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    hpricot (0.8.3)
+    hpricot (0.8.4)
     i18n (0.5.0)
     jquery-rails (0.2.7)
       rails (~> 3.0)
@@ -175,7 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  builder
+  builder (~> 2.1.2)
   capybara
   chronic
   compass (>= 0.10.6)

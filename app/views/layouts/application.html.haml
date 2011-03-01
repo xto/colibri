@@ -159,15 +159,8 @@
                                   Imprimer
                         / colonne qui flotte a gauche
                         #colonneGauche
-                          .wraperGauche
-                            %table#element28291.menu_Niveau2_false{:border => "0px", :cellpadding => "0px", :cellspacing => "0px", :onmouseout => "switchClassName('element28291', 'menu_Niveau2_false'); switchClassName('lien28291', 'menu_Niveau2_false'); switchImage('puce28291', '/images/menu/theme4/puce_menu_n2_false.gif');", :onmouseover => "switchClassName('element28291', 'menu_Niveau2_over'); switchClassName('lien28291', 'menu_Niveau2_over'); switchImage('puce28291', '/images/menu/theme4/puce_menu_n2_over.gif');"}
-                              %tr
-                                %td{:style => "width:150px;"}
-                                  %a#lien28291.menu_Niveau2_false{:href => "http://www.bbaf.ulaval.ca/sgc/bbaf/repertoire/pid/8149", :title => "Premier cycle"}
-                                    Premier cycle
-                                %td.puce_Niveau2_false
-                                  %img#puce28291.puceMenu{:align => "absmiddle", :alt => "", :border => "0", :src => "/images/puce_menu_n2_false.gif"}/
-                            
+                          =yield :colonneGauche
+
                         #colonneCentreSection
                           = yield :colonneCentreSection
 

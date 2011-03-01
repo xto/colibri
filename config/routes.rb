@@ -1,4 +1,6 @@
-PlatinumBuzzard::Application.routes.draw do
+Colibri::Application.routes.draw do
+  resources :scholarships
+  match 'scholarships/search' => 'scholarships#search', :template => 'index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +50,7 @@ PlatinumBuzzard::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.haml.
-  root :to => 'home#index'
+  root :to => 'scholarships#index'
 
   # See how all your routes lay out with "rake routes"
 

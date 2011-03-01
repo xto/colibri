@@ -1,0 +1,21 @@
+-content_for :colonneGauche do
+  .wraperGauche
+    = form_tag('/scholarships/search') do
+      = submit_tag(t(:search))
+      #cycles
+        = label_tag('cycles[first_cycle]',t(:first_cycle))
+        = check_box_tag('cycles[first_cycle]' , 1)
+        
+
+
+
+-content_for :colonneCentreSection do
+  #scholarship_list
+    %table
+      %tr
+        %th=t(:name)
+        %th= t(:cycle)
+      -@scholarships.each do |scholarship|
+        %tr
+          %td=scholarship.name
+          %td=scholarship.cycle

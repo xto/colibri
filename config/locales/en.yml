@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  name: "Name"
+  cycle: "Cycle"
+  search: "Search"
+  first_cycle: "First Cycle"
