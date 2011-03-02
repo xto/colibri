@@ -16,3 +16,4 @@ Feature: As a visitor, I want to search through the scholarship directory with m
     And I press "Search"
     Then I should see "Bourse des Nations" in the list of scholarships
     And I should not see "Bourse des Lunetiers" in the list of scholarships
+
