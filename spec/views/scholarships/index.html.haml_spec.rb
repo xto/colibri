@@ -25,5 +25,19 @@ describe "scholarships/index.html.haml" do
     end
   end
 
+  it "should provide a link to the online scholarship file" do
+    assign :scholarships, [Scholarship.create!(:seq=>"123", :name=>"patate")]
+    render
+
+    view_content_for(:colonneCentreSection).should have_selector('tr', :id => 'seq_123') do |line|
+      expected_link = "https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=123&numero_repartition=1"
+      line.should have_selector("a", :href => expected_link)
+      line.should have_selector("a", :href => expected_link) do |link|
+        link.should contain("patate")
+      end
+    end
+
+  end
+
 
 end

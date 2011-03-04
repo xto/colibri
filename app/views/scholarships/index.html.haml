@@ -3,18 +3,18 @@
     = form_tag('/scholarships/search') do
       = submit_tag(t(:search))
       #cycles
-        = label_tag('cycles[first_cycle]',t(:first_cycle))
         = check_box_tag('cycles[first_cycle]' , 1)
+        = label_tag('cycles[first_cycle]',t(:first_cycle))
         %br
-        = label_tag('cycles[second_cycle]',t(:second_cycle))
         = check_box_tag('cycles[second_cycle]' , 2)
+        = label_tag('cycles[second_cycle]',t(:second_cycle))
         %br
-        = label_tag('cycles[third_cycle]',t(:third_cycle))
         = check_box_tag('cycles[third_cycle]' , 3)
+        = label_tag('cycles[third_cycle]',t(:third_cycle))
         %br
-        = label_tag('cycles[postdoc_cycle]',t(:postdoc_cycle))
         = check_box_tag('cycles[postdoc_cycle]' , 4)
-        
+        = label_tag('cycles[postdoc_cycle]',t(:postdoc_cycle))
+
 
 
 
@@ -25,6 +25,8 @@
         %th=t(:name)
         %th= t(:cycle)
       -@scholarships.each do |scholarship|
-        %tr
-          %td=scholarship.name
+        %tr{ :id=>"seq_#{scholarship.seq}" }
+          %td
+            %a{ :href=>"https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{scholarship.seq}&numero_repartition=1" }
+              =scholarship.name
           %td=scholarship.cycle
