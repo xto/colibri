@@ -13,7 +13,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'i18n'
-gem 'gherkin'
+gem 'gherkin', '2.3.2'
 
 group :development, :test do
   gem 'compass-validator'
@@ -29,9 +29,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'spork'
   gem 'database_cleaner'
-  gem 'launchy', '0.3.7'
+  gem 'launchy'
   gem 'rcov'
   gem 'rspec-rails-matchers'
   gem "rspec-rails"
-  gem 'builder', "~> 2.1.2"
+  gem 'builder', '2.1.2'
 end
