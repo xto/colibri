@@ -29,7 +29,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'spork'
   gem 'database_cleaner'
-  gem 'launchy'
+  gem 'launchy', '0.3.7'
   gem 'rcov'
   gem 'rspec-rails-matchers'
   gem "rspec-rails"

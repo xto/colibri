@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301185801) do
+ActiveRecord::Schema.define(:version => 20110304025224) do
 
   create_table "scholarships", :force => true do |t|
     t.string   "name"
     t.string   "cycle"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "seq"
   end
 
 end
