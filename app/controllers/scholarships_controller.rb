@@ -7,7 +7,10 @@ class ScholarshipsController < ApplicationController
     conditions = ""
     
     unless params[:cycles].nil?
-      conditions = "cycle in (#{params[:cycles].values.join(',')})"
+      params[:cycles].values.each {|cycle|
+        conditions += "cycle like '%" + cycle + "%' OR "
+      }
+      conditions = conditions[0..conditions.length-4]
     end
     @scholarships  = Scholarship.all(:conditions => conditions)
     
