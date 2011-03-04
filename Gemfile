@@ -4,7 +4,7 @@ source "http://gems.github.com"
 gem 'rails', '3.0.5'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'compass', '>= 0.10.6'
+gem 'compass'
 gem 'hassle', :git => 'git://github.com/koppen/hassle.git'
 gem 'formtastic'
 gem 'validation_reflection'
@@ -13,7 +13,6 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'i18n'
-gem 'gherkin', '2.3.2'
 
 group :development, :test do
   gem 'compass-validator'
@@ -33,5 +32,4 @@ group :development, :test do
   gem 'rcov'
   gem 'rspec-rails-matchers'
   gem "rspec-rails"
-  gem 'builder', '2.1.2'
 end
