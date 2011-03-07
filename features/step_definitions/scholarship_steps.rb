@@ -10,6 +10,13 @@ Given /^the following scholarships exist for given cycle$/ do |table|
   end
 end
 
+Given /^the following scholarships exist for given cycle and type$/ do |table|
+  table.rows.each do |name, cycle, type|
+    Scholarship.create(:name => name, :cycle=>cycle, :scholarship_type => type)
+  end
+end
+
+
 
 When /^I search all scholarships$/ do
   visit path_to("the scholarship directory")
@@ -19,6 +26,13 @@ end
 When /^I search the scholarships of first cycle$/ do
   visit path_to("the scholarship directory")
   check("cycles[first_cycle]")
+  click_button("Search")
+end
+
+When /^I search for the scholarships for Aboriginal people of the 1st cycle$/ do
+  visit path_to("the scholarship directory")
+  check("cycles[first_cycle]")
+  check("types[aboriginal]")
   click_button("Search")
 end
 

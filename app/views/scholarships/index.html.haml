@@ -14,9 +14,10 @@
         %br
         = check_box_tag('cycles[postdoc_cycle]' , 4)
         = label_tag('cycles[postdoc_cycle]',t(:postdoc_cycle))
-
-
-
+      #types
+        -Scholarship::AVAILABLE_TYPES.each do |type|
+          =check_box_tag("types[#{type}]" , type)
+          =label_tag("types[#{type}]", t(type))
 
 -content_for :colonneCentreSection do
   #scholarship_list
@@ -24,9 +25,11 @@
       %tr
         %th=t(:name)
         %th= t(:cycle)
+        %th= t(:type)
       -@scholarships.each do |scholarship|
         %tr{ :id=>"seq_#{scholarship.seq}" }
           %td
             %a{ :href=>"https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{scholarship.seq}&numero_repartition=1" }
               =scholarship.name
           %td=scholarship.cycle
+          %td=scholarship.scholarship_type

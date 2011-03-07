@@ -4,16 +4,8 @@ class ScholarshipsController < ApplicationController
   end
 
   def search
-    conditions = ""
-    
-    unless params[:cycles].nil?
-      params[:cycles].values.each {|cycle|
-        conditions += "cycle like '%" + cycle + "%' OR "
-      }
-      conditions = conditions[0..conditions.length-4]
-    end
-    @scholarships  = Scholarship.all(:conditions => conditions)
-    
+    @scholarships  = ScholarshipsHelper.execute params
+
     render :template => 'scholarships/index'
   end
 

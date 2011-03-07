@@ -2,8 +2,9 @@ class AddSeqToScholarships < ActiveRecord::Migration
   def self.up
     add_column :scholarships, :seq, :string
 
-    Scholarship.create([
-
+    unless RAILS_ENV == "test"
+      
+      Scholarship.create([
 { :seq=>"2", :name=>"EXFO - Sciences de l'administration", :cycle=>"1" },
 { :seq=>"3", :name=>"Alexandre-Vachon", :cycle=>"1" },
 { :seq=>"8", :name=>"Chester-S.-Walters - G", :cycle=>"1" },
@@ -90,8 +91,10 @@ class AddSeqToScholarships < ActiveRecord::Migration
 { :seq=>"501", :name=>"Bourses Ingenieurs Canada-FINANCIeRE MANUVIE", :cycle=>"2,3" },
 { :seq=>"502", :name=>"Bourses Ingenieurs Canada-TD MELOCHE MONNEX", :cycle=>"2,3" }
 
-                   ])
-    puts Scholarship.all
+                     ])
+      puts Scholarship.all
+    end
+
   end
 
   def self.down

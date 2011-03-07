@@ -39,5 +39,18 @@ describe "scholarships/index.html.haml" do
 
   end
 
+  it "should have a checkbox for all types" do
+    assign :scholarships, []
+    render
+
+    view_content_for(:colonneGauche).should have_selector('form', :action => '/scholarships/search') do |form|
+      form.should have_selector("#types") do |types|
+        Scholarship::AVAILABLE_TYPES.each do |scholarship_type|
+          types.should have_selector("input", :id => "types_#{scholarship_type}", :name => "types[#{scholarship_type}]")
+        end
+      end
+    end
+  end
+
 
 end

@@ -14,7 +14,7 @@ Feature:
     Then I should only see the following scholarships
     |name|
     |Bourse des Nations|
-    |Bourse des Nations|
+    |Bourse des Lunetiers|
 
     
   Scenario: Find the scholarships of first cycle
@@ -30,3 +30,15 @@ Feature:
     |name|
     |Bourse des Nations|
     |Bourse des Petites Nations|
+
+  Scenario: Find the scholarship of 1st cycle and for Aboriginal people
+    Given the following scholarships exist for given cycle and type
+    |name|cycle|type|
+    |Bourse des Première Nations|1|aboriginal|
+    |Bourse des Petites Nations|1|handicap|
+    |Bourse des Lunetiers|2|artisan|
+
+    When I search for the scholarships for Aboriginal people of the 1st cycle
+    Then I should only see the following scholarships
+    |name|
+    |Bourse des Première Nations|
