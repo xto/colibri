@@ -1,6 +1,6 @@
 class ScholarshipsController < ApplicationController
   def index
-    @scholarships = []
+    @scholarships = Scholarship.all
   end
 
   def search

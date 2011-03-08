@@ -42,3 +42,32 @@ Feature:
     Then I should only see the following scholarships
     |name|
     |Bourse des Première Nations|
+
+  Scenario: Landing on the homepage displays all scholarships by default
+    Given the following scholarships exist for given cycle and type
+    |name|cycle|type|
+    |Bourse des Première Nations|1|aboriginal|
+    |Bourse des Petites Nations|1|handicap|
+    |Bourse des Lunetiers|2|artisan|
+
+    When I go to the scholarship directory
+    Then I should only see the following scholarships
+    |name|
+    |Bourse des Première Nations|
+    |Bourse des Petites Nations|
+    |Bourse des Lunetiers|
+
+  Scenario: Landing on the homepage displays all scholarships by default
+    Given the following scholarships exist for given cycle and type
+    |name|cycle|type|
+    |Bourse des Première Nations|1|aboriginal|
+    |Bourse des Petites Nations|1|handicap|
+    |Bourse des Lunetiers|2|artisan|
+
+    When I go to the homepage 
+    Then I should only see the following scholarships
+    |name|
+    |Bourse des Première Nations|
+    |Bourse des Petites Nations|
+    |Bourse des Lunetiers|
+
