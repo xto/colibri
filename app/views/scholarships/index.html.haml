@@ -1,7 +1,7 @@
 -content_for :colonneGauche do
   .wraperGauche
     = form_tag('/scholarships/search') do
-      = submit_tag(t(:search))
+      = submit_tag(t(:filter))
       #cycles
         %h4=t(:cycles)
         = check_box_tag('cycles[first_cycle]' , 1)
