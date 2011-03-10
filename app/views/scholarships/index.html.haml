@@ -1,3 +1,18 @@
+-content_for :inline_script do
+  :javascript
+    $(document).ready(function(){
+      $('img.fade_in_fade_out').toggle(
+        function(){
+           $('.'+this.id).fadeIn('slow');
+        },
+        function(){
+           $('.'+this.id).fadeOut('slow');
+        }
+      );
+    });
+    /* could be good */
+
+
 -content_for :colonneGauche do
   .wraperGauche
     = form_tag('/scholarships/search') do
@@ -32,7 +47,11 @@
       -@scholarships.each do |scholarship|
         %tr{ :id=>"seq_#{scholarship.seq}" }
           %td
+            %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/rails.png'}
+          %td
             %a{ :href=>"https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{scholarship.seq}&numero_repartition=1" }
               =scholarship.name
+            %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"} MATT DAMON
+
           %td=scholarship.cycle
           %td=scholarship.scholarship_type
