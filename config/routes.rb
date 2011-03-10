@@ -1,5 +1,6 @@
 Colibri::Application.routes.draw do
   match 'scholarships/search', :to => 'scholarships#search'
+  match 'mail_it', :to => 'scholarships#mail_it'
   resources :scholarships
   # The priority is based upon order of creation:
   # first created -> highest priority.

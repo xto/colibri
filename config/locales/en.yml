@@ -34,4 +34,7 @@ en:
   types: "Types"
   cycles: "Cycles"
   filter: "Filter"
-  scholarship_info_request_subject: "Information regarding a scholarship"
+
+  user_mailer:
+    scholarship_info_request:
+      subject: "Information regarding a scholarship"

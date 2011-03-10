@@ -8,5 +8,4 @@ class ScholarshipsController < ApplicationController
 
     render :template => 'scholarships/index'
   end
-
 end

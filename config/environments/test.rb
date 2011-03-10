@@ -25,6 +25,7 @@ Colibri::Application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
@@ -33,3 +34,5 @@ Colibri::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 end
+
+SCHOLARSHIP_INFO_REQUEST_DEFAULT_RECEIVER = "xto@pyxis-tech.com"
