@@ -32,4 +32,5 @@ group :development, :test do
   gem 'rcov'
   gem 'rspec-rails-matchers'
   gem "rspec-rails"
+  gem 'jasmine'
 end

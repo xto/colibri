@@ -1,9 +1,13 @@
 %html
   %head
     = stylesheet_link_tag '/stylesheets/compiled/default.css'
+    = javascript_include_tag '/javascripts/jquery.min.js'
+
     %title
       Bureau des bourses et de l'aide financi&egrave;re - R&eacute;pertoire de bourses
   %body
+    = yield :inline_script
+    
     #banner
       #bar
         %span{:class => 'red_bar'}
