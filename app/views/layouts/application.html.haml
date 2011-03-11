@@ -28,9 +28,10 @@
     #disclaimer
       %span
         =t(:excerpt_from_bbaf)
-    #colonneGauche
-      = yield :colonneGauche
+    #wrap{:style => "width: 900px"}
+      #colonneGauche
+        = yield :colonneGauche
 
-    #colonneCentreSection
-      = yield :colonneCentreSection
+      #colonneCentreSection
+        = yield :colonneCentreSection
 

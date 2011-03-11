@@ -19,7 +19,7 @@ class Scholarship < ActiveRecord::Base
   	  	              precarious_financial_situation
   	  	              sport
   	  	              research_internship_field_study
-  	  	              professional_internship}.sort
+  	  	              professional_internship}
 
   def bbaf_url
     "https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{seq}&numero_repartition=1"

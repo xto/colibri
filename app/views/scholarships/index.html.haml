@@ -39,9 +39,9 @@
 
 -content_for :colonneCentreSection do
   #scholarship_list
-    %table
+    %table{:style => "width:600px;"}
       %tr
-        %th=t(:name)
+        %th{:colspan=>'2'}=t(:name)
         %th= t(:cycle)
       -@scholarships.each do |scholarship|
         %tr{ :id=>"seq_#{scholarship.seq}" }

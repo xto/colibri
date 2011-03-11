@@ -23,5 +23,6 @@ span.yellow_bar {
 
 /* line 20, ../../../app/stylesheets/default.scss */
 #colonneCentreSection {
+  min-width: 400px;
   float: left;
 }

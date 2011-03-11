@@ -50,11 +50,11 @@ describe ScholarshipsController do
       UserMailer.should_receive(:scholarship_info_request).with("someone@large.sea",[@bourse_aborigene_cycle_1]).and_return(@mock)
       @mock.should_receive(:deliver)
       
-      post :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.id
+      get :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.seq
     end
 
     it "should redirect to the index action" do
-      post :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.id
+      get :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.seq
 
       response.should redirect_to "/scholarships"
     end
