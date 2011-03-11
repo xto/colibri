@@ -10,7 +10,7 @@ class ScholarshipsController < ApplicationController
   end
 
   def scholarship_info_request
-    scholarships = [params[:scholarship_ids]].collect{|id| Scholarship.find(id)}
+    scholarships = [params[:scholarship_ids]].collect{|id| Scholarship.find_by_seq(id)}
     UserMailer.scholarship_info_request(params[:requester_address],scholarships).deliver
     redirect_to :action => 'index'
   end
