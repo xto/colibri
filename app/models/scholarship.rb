@@ -21,4 +21,7 @@ class Scholarship < ActiveRecord::Base
   	  	              research_internship_field_study
   	  	              professional_internship}.sort
 
+  def bbaf_url
+    "https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{seq}&numero_repartition=1"
+  end
 end

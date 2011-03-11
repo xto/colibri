@@ -52,5 +52,34 @@ describe "scholarships/index.html.haml" do
     end
   end
 
+  describe "scholarship information request" do
+    before(:each) do
+      @bourse_aborigene_cycle_1 = Scholarship.create(:name => "Bourse cycle 1", :cycle => 1, :seq => '1')
+      @bourse_cycle_2 = Scholarship.create(:name => "Bourse cycle 2", :cycle => 2, :seq => '2')
+    end
 
+    it "should have a form for each scholarship" do
+      assign :scholarships, Scholarship.all
+      render
+
+      view_content_for(:colonneCentreSection).should have_selector('tr', :id => 'seq_1') do |line|
+        line.should have_selector('form', :id=>'form_for_scholarship_1') do |form|
+          form.should have_selector('input', :name => 'scholarship_ids', :type => 'hidden', :value => '1')
+          form.should have_selector('input', :type => 'text', :name => 'requester_address'  ,:value => '')
+          form.should have_selector('input', :type=> 'submit', :value => I18n.t(:request_info_button))
+        end
+      end
+
+      view_content_for(:colonneCentreSection).should have_selector('tr', :id => 'seq_2') do |line|
+        line.should have_selector('form', :id=>'form_for_scholarship_2') do |form|
+          form.should have_selector('input', :name => 'scholarship_ids', :type => 'hidden', :value => '2')
+          form.should have_selector('input', :type => 'text', :name => 'requester_address'  ,:value => '')
+          form.should have_selector('input', :type=> 'submit', :value => I18n.t(:request_info_button))
+        end
+      end
+
+    end
+
+
+  end
 end

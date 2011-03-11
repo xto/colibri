@@ -39,4 +39,26 @@ describe ScholarshipsController do
     end
   end
 
+  describe "POST scholarship_info_request" do
+    before(:each) do
+      @bourse_aborigene_cycle_1 = Scholarship.create(:name => "Bourse cycle 1", :cycle => 1)
+      @bourse_cycle_2 = Scholarship.create(:name => "Bourse cycle 2", :cycle => 2)
+    end
+
+    it "should make a call to the mailer" do
+      @mock = double()
+      UserMailer.should_receive(:scholarship_info_request).with("someone@large.sea",[@bourse_aborigene_cycle_1]).and_return(@mock)
+      @mock.should_receive(:deliver)
+      
+      post :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.id
+    end
+
+    it "should redirect to the index action" do
+      post :scholarship_info_request, :requester_address => "someone@large.sea", :scholarship_ids => @bourse_aborigene_cycle_1.id
+
+      response.should redirect_to "/scholarships"
+    end
+
+  end
+
 end

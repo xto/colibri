@@ -38,3 +38,6 @@ en:
   user_mailer:
     scholarship_info_request:
       subject: "Information regarding a scholarship"
+  request_info_button: "Request More Information"
+  want_more_info: "Want to receive more information?"
+  enter_email: "Enter your email address"
