@@ -41,8 +41,8 @@ describe ScholarshipsController do
 
   describe "POST scholarship_info_request" do
     before(:each) do
-      @bourse_aborigene_cycle_1 = Scholarship.create(:name => "Bourse cycle 1", :cycle => 1)
-      @bourse_cycle_2 = Scholarship.create(:name => "Bourse cycle 2", :cycle => 2)
+      @bourse_aborigene_cycle_1 = Scholarship.create(:name => "Bourse cycle 1", :cycle => 1, :seq => '1')
+      @bourse_cycle_2 = Scholarship.create(:name => "Bourse cycle 2", :cycle => 2, :seq => '2')
     end
 
     it "should make a call to the mailer" do

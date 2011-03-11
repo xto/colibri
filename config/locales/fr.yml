@@ -1,0 +1,43 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  name: "Nom de la bourse"
+  cycle: "Cycle"
+  search: "Rechercher"
+  first_cycle: "Premier Cycle"
+  second_cycle: "Deuxième Cycle"
+  third_cycle: "Troisième Cycle"
+  postdoc_cycle: "Scolarité Postdoctoral"
+  type: "Type"
+  admission: "Admission"
+  aboriginal: "Autochtone"
+  short_stay: "Court Séjour"
+  ancestry_and_territory: "Descendance et Territoire"
+  social_commitment: "Engagement Social / Communautaire"
+  canadian_student_outside_quebec: "Étudiant canadien, hors Québec"
+  foreign_student: "Étudiant étranger"
+  student_with_disability: "Étudiant handicapé"
+  excellence: "Excellence"
+  tuition_fees_exemption: "Exemption des droits de scolarité"
+  woman: "Femme"
+  innovation: "Innovation"
+  leadership: "Leadership"
+  mobility: "Mobilité"
+  award: "Prix"
+  entrepreneurial_profile: "Profil entrepreneurial"
+  precarious_financial_situation: "Situation financière précaire"
+  sport: "Sport"
+  research_internship_field_study: "Stage de recherche / étude de terrain"
+  professional_internship: "Stage professionnel"
+  types: "Types"
+  cycles: "Cycles"
+  filter: "Filtrer"
+
+  user_mailer:
+    scholarship_info_request:
+      subject: "Information concernant une bourse"
+  request_info_button: "Demander plus d'information"
+  want_more_info: "Vous désirez avoir plus d'information?"
+  enter_email: "Entrez votre address de courriel"
+  excerpt_from_bbaf: "SVP notez que ceci n'est qu'un extrait du répertoire des bourse. Pour le répertoire complet, aller à l'adresse suivante: http://www.bbaf.ulaval.ca/"
