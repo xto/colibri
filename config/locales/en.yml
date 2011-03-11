@@ -34,4 +34,11 @@ en:
   types: "Types"
   cycles: "Cycles"
   filter: "Filter"
-  scholarship_info_request_subject: "Information regarding a scholarship"
+
+  user_mailer:
+    scholarship_info_request:
+      subject: "Information regarding a scholarship"
+  request_info_button: "Request More Information"
+  want_more_info: "Want to receive more information?"
+  enter_email: "Enter your email address"
+  excerpt_from_bbaf: "Please note that this is an excerpt of the scholarship catalog. For the complete list, go to http://www.bbaf.ulaval.ca/"

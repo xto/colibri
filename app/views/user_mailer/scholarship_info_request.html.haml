@@ -1,0 +1,8 @@
+#content
+  %span= "#{@requester} would like more information on the following scholarship(s): "
+  %ul
+    -@scholarships.each do |scholarship|
+      %li
+        %a{:href => scholarship.bbaf_url}
+          =scholarship.name
+

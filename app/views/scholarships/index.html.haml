@@ -46,10 +46,16 @@
       -@scholarships.each do |scholarship|
         %tr{ :id=>"seq_#{scholarship.seq}" }
           %td
-            %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/rails.png'}
+            %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
           %td
-            %a{ :href=>"https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{scholarship.seq}&numero_repartition=1" }
+            %a{ :href=>scholarship.bbaf_url}
               =scholarship.name
-            %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"} MATT DAMON
+            %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"}
+              %span=t(:want_more_info)
+              %form{:id => "form_for_scholarship_#{scholarship.seq}", :action => 'scholarships/scholarship_info_request'}
+                =hidden_field_tag('scholarship_ids', scholarship.seq, :id=> nil)
+                =label_tag('requester_address', t(:enter_email))
+                =text_field_tag('requester_address', '', :id=> nil)
+                =submit_tag(t(:request_info_button))
 
           %td=scholarship.cycle

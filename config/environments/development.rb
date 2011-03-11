@@ -14,8 +14,15 @@ Colibri::Application.configure do
   config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {:address => "smtp.gmail.com",
+                                        :port => 587,:domain => ENV['GMAIL_SMTP_USERNAME'],
+                                        :user_name  => ENV['GMAIL_SMTP_USERNAME'],
+                                        :password => ENV['GMAIL_SMTP_PASSWORD'],
+                                        :authentication => 'plain',
+                                        :enable_starttls_auto => true}
+  # Care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -23,4 +30,6 @@ Colibri::Application.configure do
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
 end
+
+SCHOLARSHIP_INFO_REQUEST_DEFAULT_RECEIVER = "xavier.to.01@gmail.com"
 
