@@ -43,7 +43,6 @@
       %tr
         %th=t(:name)
         %th= t(:cycle)
-        %th= t(:type)
       -@scholarships.each do |scholarship|
         %tr{ :id=>"seq_#{scholarship.seq}" }
           %td
@@ -54,4 +53,3 @@
             %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"} MATT DAMON
 
           %td=scholarship.cycle
-          %td=scholarship.scholarship_type
