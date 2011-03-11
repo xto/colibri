@@ -52,7 +52,7 @@
               =scholarship.name
             %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"}
               %span=t(:want_more_info)
-              %form{:id => "form_for_scholarship_#{scholarship.seq}", :action => 'scholarship_info_request'}
+              %form{:id => "form_for_scholarship_#{scholarship.seq}", :action => '/scholarships/scholarship_info_request'}
                 =hidden_field_tag('scholarship_ids', scholarship.seq, :id=> nil)
                 =label_tag('requester_address', t(:enter_email))
                 =text_field_tag('requester_address', '', :id=> nil)
