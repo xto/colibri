@@ -16,9 +16,9 @@ Colibri::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {:address => "smtp.gmail.com",
-                                        :port => 587,:domain => 'your.domain',
-                                        :user_name  => '<your username>',
-                                        :password => '<your password',
+                                        :port => 587,:domain => ENV['GMAIL_SMTP_USERNAME'],
+                                        :user_name  => ENV['GMAIL_SMTP_USERNAME'],
+                                        :password => ENV['GMAIL_SMTP_PASSWORD'],
                                         :authentication => 'plain',
                                         :enable_starttls_auto => true}
   # Care if the mailer can't send
