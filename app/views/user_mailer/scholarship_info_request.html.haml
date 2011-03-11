@@ -1,5 +1,5 @@
 #content
-  %span= "#{@requester} would like more information on the following scholarship(s): "
+  %span= "#{@requester} #{t(:email_header)}: "
   %ul
     -@scholarships.each do |scholarship|
       %li
