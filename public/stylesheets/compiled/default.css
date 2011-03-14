@@ -26,3 +26,8 @@ span.yellow_bar {
   min-width: 400px;
   float: left;
 }
+
+/* line 25, ../../../app/stylesheets/default.scss */
+.fade_in_fade_out {
+  background-color: #7fffd4;
+}

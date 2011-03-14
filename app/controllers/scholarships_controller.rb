@@ -1,10 +1,14 @@
 class ScholarshipsController < ApplicationController
   def index
-    @scholarships = Scholarship.all
+    redirect_to :action => 'search'
   end
 
   def search
-    @scholarships  = ScholarshipsHelper.execute params
+    scholarships_query  = ScholarshipsHelper.execute(params)
+    @scholarships_count = scholarships_query.size
+    @scholarships = scholarships_query.page(params[:page])
+    @selected_cycles = params[:cycles] || {}
+    @selected_types = params[:types] || {}
 
     render :template => 'scholarships/index'
   end

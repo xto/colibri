@@ -42,3 +42,12 @@ fr:
   enter_email: "Entrez votre address de courriel"
   excerpt_from_bbaf: "SVP notez que ceci n'est qu'un extrait du répertoire des bourse. Pour le répertoire complet, aller à l'adresse suivante: http://www.bbaf.ulaval.ca/"
   email_header: "veut recevoir plus d'information concernant les bourses suivantes:"
+
+  views:
+    pagination:
+      next: "Suivant"
+      previous: "Précédent"
+  scholarship_count:
+    zero: "Aucune bourse ne correspond aux critères de filtre"
+    one: "Une bourse correspond aux critères de filtre"
+    other: "%{count} bourses correspondent aux critères de filtre"

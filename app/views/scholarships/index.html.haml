@@ -3,14 +3,13 @@
     $(document).ready(function(){
       $('img.fade_in_fade_out').toggle(
         function(){
-           $('.'+this.id).fadeIn('slow');
+           $('.'+this.id).slideDown('slow');
         },
         function(){
-           $('.'+this.id).fadeOut('slow');
+           $('.'+this.id).slideUp('slow');
         }
       );
     });
-    /* could be good */
 
 
 -content_for :colonneGauche do
@@ -19,33 +18,30 @@
       = submit_tag(t(:filter))
       #cycles
         %h4=t(:cycles)
-        = check_box_tag('cycles[first_cycle]' , 1)
-        = label_tag('cycles[first_cycle]',t(:first_cycle))
-        %br
-        = check_box_tag('cycles[second_cycle]' , 2)
-        = label_tag('cycles[second_cycle]',t(:second_cycle))
-        %br
-        = check_box_tag('cycles[third_cycle]' , 3)
-        = label_tag('cycles[third_cycle]',t(:third_cycle))
-        %br
-        = check_box_tag('cycles[postdoc_cycle]' , 4)
-        = label_tag('cycles[postdoc_cycle]',t(:postdoc_cycle))
+        -Scholarship::AVAILABLE_CYCLES.each do |cycle|
+          = check_box_tag("cycles[#{cycle}]" , cycle, !@selected_cycles["#{cycle}"].nil?)
+          = label_tag("cycles[#{cycle}]",t(cycle))
+          %br
       #types
         %h4=t(:types)
         -Scholarship::AVAILABLE_TYPES.each do |type|
-          =check_box_tag("types[#{type}]" , type)
+          =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?)
           =label_tag("types[#{type}]", t(type))
           %br
 
 -content_for :colonneCentreSection do
+
   #scholarship_list
     %table{:style => "width:600px;"}
       %tr
+        %td{:colspan=>'3'}
+          ="#{t(:scholarship_count, :count => @scholarships_count)}"
+      %tr{:id => "table_header" }
         %th{:colspan=>'2'}=t(:name)
         %th= t(:cycle)
       -@scholarships.each do |scholarship|
-        %tr{ :id=>"seq_#{scholarship.seq}" }
-          %td
+        %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'row1', 'row2')}"}
+          %td{:style => "vertical-align:top;"}
             %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
           %td
             %a{ :href=>scholarship.bbaf_url}
@@ -59,3 +55,8 @@
                 =submit_tag(t(:request_info_button))
 
           %td=scholarship.cycle
+
+      %tr
+        %td{:colspan => '3', :style => "text-align:right;"}= paginate @scholarships
+
+

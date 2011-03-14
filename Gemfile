@@ -13,6 +13,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'i18n'
+gem 'kaminari'
 
 group :development, :test do
   gem 'compass-validator'

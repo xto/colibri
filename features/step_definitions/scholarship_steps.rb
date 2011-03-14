@@ -39,7 +39,7 @@ end
 
 Then /^I should only see the following scholarships/ do |table|
   with_scope("#scholarship_list") do
-    all("table tr").size.should == table.hashes.size + 1
+    all("table tr.scholarship").size.should == table.hashes.size
   end
   table.hashes.each do |scholarship|
     with_scope('#scholarship_list') do

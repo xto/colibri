@@ -36,6 +36,19 @@ describe ScholarshipsController do
       it "should not fail if filtering only based on type" do
         lambda{post :search, :types => {:aboriginal => 'aboriginal' }}.should_not raise_error
       end
+
+      it "should assign 4 as @scholarship_count when there are 4 scholarships" do
+        post :search
+        assigns(:scholarships_count).should be_equal 4
+      end
+    end
+
+    describe "filtering criteria" do
+      it "should remember the selected cycle filters" do
+        post :search, :cycles => {:first_cycle => '1', :second_cycle => '2'}
+
+        assigns(:selected_cycles).should == {"first_cycle" => '1', "second_cycle"=> '2'}
+      end
     end
   end
 
@@ -58,6 +71,8 @@ describe ScholarshipsController do
 
       response.should redirect_to "/scholarships"
     end
+
+
 
   end
 
