@@ -23,7 +23,7 @@ class Scholarship < ActiveRecord::Base
   	  	              research_internship_field_study
   	  	              professional_internship}
   
-  AVAILABLE_CYCLES = ["first_cycle","second_cycle","third_cycle","postdoc_cycle"]
+  AVAILABLE_CYCLES = [["first_cycle",1],["second_cycle",2],["third_cycle",3],["postdoc_cycle",4]]
 
   def bbaf_url
     "https://oraweb.ulaval.ca/pls/gpb/gpb100_fiche_bourse.consultation_fiche2?numero_concours=1&sequence_bourse=#{seq}&numero_repartition=1"

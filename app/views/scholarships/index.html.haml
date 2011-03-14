@@ -18,8 +18,8 @@
       = submit_tag(t(:filter))
       #cycles
         %h4=t(:cycles)
-        -Scholarship::AVAILABLE_CYCLES.each do |cycle|
-          = check_box_tag("cycles[#{cycle}]" , cycle, !@selected_cycles["#{cycle}"].nil?)
+        -Scholarship::AVAILABLE_CYCLES.each do |cycle, value|
+          = check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?)
           = label_tag("cycles[#{cycle}]",t(cycle))
           %br
       #types
