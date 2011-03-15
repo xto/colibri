@@ -1,3 +1,16 @@
+body{
+    
+    font:{
+        family: Arial;
+        size: 17px;
+    }
+}
+
+#content{
+    width:900px;
+    margin:auto;
+}
+// HEADER
 span.red_bar{
     background-color: #cc3333;
     height: 10px;
@@ -13,15 +26,118 @@ span.yellow_bar{
     display: inline-block;
 }
 
+#disclaimer{
+    text-align:center;
+    color:#990000;
+    font:{
+        weight:bold;
+    }
+}
+
+#filter_count{
+    text-align:center;
+    font:{
+        weight:bold;
+    }
+}
+
+// Left Column
 #colonneGauche{
     float: left;
     width: 250px;
 }
+
+#filter_button{
+    margin-left:85px;
+    font:{
+        size: 16px;
+        weight: bold;
+    }
+}
+
+.filter_category_header{
+    background-position: right 2px;
+    background-repeat:no-repeat;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #f5f5f5;
+    margin-bottom:0px;
+}
+
+h4.nth_header{
+    margin-top: 4px;
+    -webkit-margin-before: 4px;
+}
+
+.filters{
+    background-color:#96afc7;
+    color:#00008b;
+
+    font:{
+        size:12px;
+        weight:bold;
+    }
+}
+
+.filter_category_bottom{
+    background-image:url(/images/filter_header_bottom.gif);
+    background-repeat: no-repeat;
+    margin-bottom:2px;
+}
+
+.filter_category_top{
+    background-image:url(/images/filter_header_top.gif);
+    background-repeat: no-repeat;
+}
+
+.collapsed{
+    @extend .filter_category_header;
+    background-image:url(/images/arrow_filter_header_collapsed.png);
+}
+
+.expanded{
+    @extend .filter_category_header;
+    background-image:url(/images/arrow_filter_header_expanded.png);
+}
+
+
+//Main Section
+
 #colonneCentreSection{
-    min-width:400px;
+    min-width:440px;
     float: left;
+    margin-left:5px;
+}
+
+#scholarship_list{
+    table{
+        width:645px;
+        border:none;
+    }
 }
 
 .fade_in_fade_out{
-    background-color:#7fffd4;
+    width: 16px;
+    height: 16px;
+    padding-top:4px;
+    padding-bottom:4px;
 }
+
+tr.scholarship{
+    padding-top:12312312px;
+    padding-bottom:12px;
+}
+
+.scholarship_odd{
+    background-color:#ffffff;
+}
+
+.scholarship_even{
+    background-color:#e6e6fa;
+}
+
+.info_button{
+    vertical-align:top;
+    background-color:white;
+}
+

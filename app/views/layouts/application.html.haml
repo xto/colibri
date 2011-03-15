@@ -2,36 +2,37 @@
   %head
     = stylesheet_link_tag '/stylesheets/compiled/default.css'
     = javascript_include_tag '/javascripts/jquery.min.js'
+    = javascript_include_tag '/javascripts/jquery.rotate.1-1.js'
 
     %title
       Bureau des bourses et de l'aide financi&egrave;re - R&eacute;pertoire de bourses
   %body
     = yield :inline_script
-    
-    #banner
-      #bar
-        %span{:class => 'red_bar'}
-          &nbsp;
-        %span{:class => 'yellow_bar'}
-          &nbsp;
-      #bbaf_header
-        %a{:href => "/sgc/bbaf"}
-          %img{:alt => "Bureau des bourses et de l'aide financi&egrave;re (BBAF)", :border => "0", :src => "/images/titreBandeau.gif"}/
+    #content
+      #banner
+        #bar
+          %span{:class => 'red_bar'}
+            &nbsp;
+          %span{:class => 'yellow_bar'}
+            &nbsp;
+        #bbaf_header
+          %a{:href => "/sgc/bbaf"}
+            %img{:alt => "Bureau des bourses et de l'aide financi&egrave;re (BBAF)", :border => "0", :src => "/images/titreBandeau.gif"}/
 
-        %a.bandContent1{:href => "http://www.ulaval.ca", :target => "_blank" , :style => "float: right; padding-right: 1%" }
-          %img{:alt => "Universit&eacute; Laval", :border => "0", :src => "/images/band-ulaval-logo.gif"}
+          %a.bandContent1{:href => "http://www.ulaval.ca", :target => "_blank" , :style => "float: right; padding-right: 1%" }
+            %img{:alt => "Universit&eacute; Laval", :border => "0", :src => "/images/band-ulaval-logo.gif"}
 
-      %br
-      %br
-      #blue_header
-        %img{:alt => "BBAF", :src => '/images/blue_header.png', :width => '100%'}
-    #disclaimer
-      %span
-        =t(:excerpt_from_bbaf)
-    #wrap{:style => "width: 900px"}
-      #colonneGauche
-        = yield :colonneGauche
+        %br
+        %br
+        #blue_header
+          %img{:alt => "BBAF", :src => '/images/blue_header.png', :width => '100%'}
+      #disclaimer
+        %span
+          =t(:excerpt_from_bbaf)
+      #wrap{:style => "width: 900px"}
+        #colonneGauche
+          = yield :colonneGauche
 
-      #colonneCentreSection
-        = yield :colonneCentreSection
+        #colonneCentreSection
+          = yield :colonneCentreSection
 

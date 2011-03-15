@@ -9,39 +9,80 @@
            $('.'+this.id).slideUp('slow');
         }
       );
+
+      $('#cycles_header').toggle(
+        function(){
+          $('#cycles').slideUp('slow', function(){
+            $('#cycles_header > h4').removeClass('expanded');
+            $('#cycles_header > h4').addClass('collapsed');
+          });
+        },
+        function(){
+          $('#cycles').slideDown('slow',function(){
+            $('#cycles_header > h4').removeClass('collapsed');
+            $('#cycles_header > h4').addClass('expanded');
+          });
+        }
+      );
+
+      $('#types_header').toggle(
+        function(){
+          $('#types').slideUp('slow', function(){
+            $('#types_header > h4').removeClass('expanded');
+            $('#types_header > h4').addClass('collapsed');
+          });
+        },
+        function(){
+          $('#types').slideDown('slow',function(){
+            $('#types_header > h4').removeClass('collapsed');
+            $('#types_header > h4').addClass('expanded');
+          });
+        }
+      );
     });
 
 
 -content_for :colonneGauche do
   .wraperGauche
     = form_tag('/scholarships/search') do
-      = submit_tag(t(:filter))
-      #cycles
-        %h4=t(:cycles)
+
+      =submit_tag(t(:filter), :id => 'filter_button')
+      #cycles_header{:class => 'filter_category_top'}
+        %h4{:class => 'filter_category_header expanded'}=t(:cycles)
+      #cycles{:class => 'filters'}
         -Scholarship::AVAILABLE_CYCLES.each do |cycle, value|
           = check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?)
           = label_tag("cycles[#{cycle}]",t(cycle))
           %br
-      #types
-        %h4=t(:types)
+
+      #cycles_bottom{:class => 'filter_category_bottom'}
+        %span &nbsp;
+
+      #types_header{:class => 'filter_category_top'}
+        %h4{:class => 'filter_category_header nth_header expanded'}=t(:types)
+      #types{:class => 'filters'}
         -Scholarship::AVAILABLE_TYPES.each do |type|
           =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?)
           =label_tag("types[#{type}]", t(type))
           %br
 
+      #types_bottom{:class => 'filter_category_bottom'}
+        %span &nbsp;
+
+
 -content_for :colonneCentreSection do
 
   #scholarship_list
-    %table{:style => "width:600px;"}
+    %table
       %tr
-        %td{:colspan=>'3'}
+        %td{:id=> 'filter_count',:colspan=>'3'}
           ="#{t(:scholarship_count, :count => @scholarships_count)}"
       %tr{:id => "table_header" }
         %th{:colspan=>'2'}=t(:name)
         %th= t(:cycle)
       -@scholarships.each do |scholarship|
-        %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'row1', 'row2')}"}
-          %td{:style => "vertical-align:top;"}
+        %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
+          %td{:class => "info_button"}
             %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
           %td
             %a{ :href=>scholarship.bbaf_url}
