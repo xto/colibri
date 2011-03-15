@@ -35,7 +35,8 @@ span.yellow_bar{
 }
 
 #filter_count{
-    text-align:center;
+    
+    text-align:left;
     font:{
         weight:bold;
     }
@@ -48,7 +49,7 @@ span.yellow_bar{
 }
 
 #filter_button{
-    margin-left:85px;
+    margin-left:70%;
     font:{
         size: 16px;
         weight: bold;
@@ -121,6 +122,10 @@ h4.nth_header{
     height: 16px;
     padding-top:4px;
     padding-bottom:4px;
+}
+
+#table_header{
+    text-align:center;
 }
 
 tr.scholarship{
