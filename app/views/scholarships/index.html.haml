@@ -72,21 +72,18 @@
     #scholarship_list
       %table
         %tr
+          %td{:id=> 'filter_count',:colspan=>'3'}
+            ="#{t(:scholarship_count, :count => @scholarships_count)}"
+
+        %tr
           %td
-            %img{:class=>'fade_in_fade_out',  :src => '/images/info_button.png', :width => '405px', :height=>'24px'}
+            %img{:class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
           %td{:colspan => '2'}
             #info_request{:style=>"display: none;"}
               %span=t(:want_more_info)
               =label_tag('requester_address', t(:enter_email))
               =text_field_tag('requester_address', '', :id=> nil)
               =submit_tag(t(:request_info_button))
-        %tr
-          %td{:id=> 'filter_count',:colspan=>'3'}
-            ="#{t(:scholarship_count, :count => @scholarships_count)}"
-
-        %tr{:id => "applied_filters"}
-          %td{:colspan => '3'}
-
 
         %tr{:id => "table_header" }
           %th{:colspan=>'2'}=t(:name)
