@@ -5,7 +5,7 @@ module ScholarshipsHelper
 
     add_cycle_filter(params)
     add_type_filter(params)
-    Scholarship.where(@conditions,*@values)
+    Scholarship.where(@conditions,*@values).order(:name)
   end
 
 
