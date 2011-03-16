@@ -89,22 +89,12 @@ describe "scholarships/index.html.haml" do
     it "should have a form for each scholarship" do
       render
 
-      view_content_for(:colonneCentreSection).should have_selector('tr', :id => 'seq_1') do |line|
-        line.should have_selector('form', :id=>'form_for_scholarship_1') do |form|
-          form.should have_selector('input', :name => 'scholarship_ids', :type => 'hidden', :value => '1')
+      view_content_for(:colonneCentreSection).should have_selector('form', :id=>'form_for_scholarship_info') do |form|
           form.should have_selector('input', :type => 'text', :name => 'requester_address'  ,:value => '')
           form.should have_selector('input', :type=> 'submit', :value => I18n.t(:request_info_button))
-        end
+          form.should have_selector('input', :name => 'selected_scholarships[1]', :type => 'checkbox')
+          form.should have_selector('input', :name => 'selected_scholarships[1]', :type => 'checkbox')
       end
-
-      view_content_for(:colonneCentreSection).should have_selector('tr', :id => 'seq_2') do |line|
-        line.should have_selector('form', :id=>'form_for_scholarship_2') do |form|
-          form.should have_selector('input', :name => 'scholarship_ids', :type => 'hidden', :value => '2')
-          form.should have_selector('input', :type => 'text', :name => 'requester_address'  ,:value => '')
-          form.should have_selector('input', :type=> 'submit', :value => I18n.t(:request_info_button))
-        end
-      end
-
     end
   end
 end

@@ -1,12 +1,9 @@
 -content_for :inline_script do
   :javascript
     $(document).ready(function(){
-      $('img.fade_in_fade_out').toggle(
+      $('img.fade_in_fade_out').click(
         function(){
-           $('.'+this.id).slideDown('slow');
-        },
-        function(){
-           $('.'+this.id).slideUp('slow');
+           $("#info_request").slideToggle('slow');
         }
       );
 
@@ -71,38 +68,40 @@
 
 
 -content_for :colonneCentreSection do
-
-  #scholarship_list
-    %table
-      %tr
-        %td{:id=> 'filter_count',:colspan=>'3'}
-          ="#{t(:scholarship_count, :count => @scholarships_count)}"
-
-      %tr{:id => "applied_filters"}
-        %td{:colspan => '3'}
-
-
-      %tr{:id => "table_header" }
-        %th{:colspan=>'2'}=t(:name)
-        %th= t(:cycle)
-      -@scholarships.each do |scholarship|
-        %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
-          %td{:class => "info_button"}
-            %img{:id => "exp_#{scholarship.seq}", :class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
+  %form{:id => "form_for_scholarship_info", :action => '/scholarships/scholarship_info_request', :method => "post"}
+    #scholarship_list
+      %table
+        %tr
           %td
-            %a{ :href=>scholarship.bbaf_url}
-              =scholarship.name
-            %div{:class => "fadeable exp_#{scholarship.seq}", :style=>"display:none;"}
+            %img{:class=>'fade_in_fade_out',  :src => '/images/info_button.png', :width => '405px', :height=>'24px'}
+          %td{:colspan => '2'}
+            #info_request{:style=>"display: none;"}
               %span=t(:want_more_info)
-              %form{:id => "form_for_scholarship_#{scholarship.seq}", :action => '/scholarships/scholarship_info_request'}
-                =hidden_field_tag('scholarship_ids', scholarship.seq, :id=> nil)
-                =label_tag('requester_address', t(:enter_email))
-                =text_field_tag('requester_address', '', :id=> nil)
-                =submit_tag(t(:request_info_button))
+              =label_tag('requester_address', t(:enter_email))
+              =text_field_tag('requester_address', '', :id=> nil)
+              =submit_tag(t(:request_info_button))
+        %tr
+          %td{:id=> 'filter_count',:colspan=>'3'}
+            ="#{t(:scholarship_count, :count => @scholarships_count)}"
 
-          %td=scholarship.cycle
+        %tr{:id => "applied_filters"}
+          %td{:colspan => '3'}
 
-      %tr
-        %td{:colspan => '3', :style => "text-align:right;"}= paginate @scholarships
+
+        %tr{:id => "table_header" }
+          %th{:colspan=>'2'}=t(:name)
+          %th= t(:cycle)
+        -@scholarships.each do |scholarship|
+          %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
+            %td{:class => "info_button"}
+              =check_box_tag("selected_scholarships[#{scholarship.seq}]", nil, false)
+              //
+            %td
+              %a{ :href=>scholarship.bbaf_url}
+                =scholarship.name
+            %td=scholarship.cycle
+
+        %tr
+          %td{:colspan => '3', :style => "text-align:right;"}= paginate @scholarships
 
 
