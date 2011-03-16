@@ -13,6 +13,9 @@ describe "scholarships/index.html.haml" do
 
       view_content_for(:colonneGauche).should have_selector('form', :action => '/scholarships/search') do |form|
         form.should have_selector("#cycles") do |cycles|
+          cycles.should have_selector("label", :for => "all_cycles")
+          cycles.should have_selector("input", :type =>"radio", :name=> "all_cycles")
+
           cycles.should have_selector("label", :for => "cycles_first_cycle")
           cycles.should have_selector("input", :id => "cycles_first_cycle", :name => 'cycles[first_cycle]')
 

@@ -38,8 +38,7 @@ fr:
     scholarship_info_request:
       subject: "Information concernant une bourse"
   request_info_button: "Demander plus d'information"
-  want_more_info: "Vous désirez avoir plus d'information?"
-  enter_email: "Entrez votre address de courriel"
+  enter_email: "Entrez votre adresse de courriel pour avoir plus d'information sur les bourses sélectionnées"
   excerpt_from_bbaf: "SVP notez que ceci n'est qu'un extrait du répertoire des bourse. Pour le répertoire complet, aller à l'adresse suivante: http://www.bbaf.ulaval.ca/"
   email_header: "veut recevoir plus d'information concernant les bourses suivantes:"
 

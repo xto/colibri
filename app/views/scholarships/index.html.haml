@@ -1,41 +1,8 @@
 -content_for :inline_script do
   :javascript
     $(document).ready(function(){
-      $('img.fade_in_fade_out').click(
-        function(){
-           $("#info_request").slideToggle('slow');
-        }
-      );
-
-      $('#cycles_header').toggle(
-        function(){
-          $('#cycles').slideUp('slow', function(){
-            $('#cycles_header > h4').removeClass('expanded');
-            $('#cycles_header > h4').addClass('collapsed');
-          });
-        },
-        function(){
-          $('#cycles').slideDown('slow',function(){
-            $('#cycles_header > h4').removeClass('collapsed');
-            $('#cycles_header > h4').addClass('expanded');
-          });
-        }
-      );
-
-      $('#types_header').toggle(
-        function(){
-          $('#types').slideUp('slow', function(){
-            $('#types_header > h4').removeClass('expanded');
-            $('#types_header > h4').addClass('collapsed');
-          });
-        },
-        function(){
-          $('#types').slideDown('slow',function(){
-            $('#types_header > h4').removeClass('collapsed');
-            $('#types_header > h4').addClass('expanded');
-          });
-        }
-      );
+      make_collapsable("#cycles");
+      make_collapsable("#types");
     });
 
 
@@ -76,11 +43,8 @@
             ="#{t(:scholarship_count, :count => @scholarships.size)}"
 
         %tr
-          %td
-            %img{:class=>'fade_in_fade_out',  :src => '/images/info_button.png'}
-          %td{:colspan => '2'}
-            #info_request{:style=>"display: none;"}
-              %span=t(:want_more_info)
+          %td{:colspan => '3'}
+            #info_request
               =label_tag('requester_address', t(:enter_email))
               =text_field_tag('requester_address', '', :id=> nil)
               =submit_tag(t(:request_info_button))
