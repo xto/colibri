@@ -73,7 +73,7 @@
       %table
         %tr
           %td{:id=> 'filter_count',:colspan=>'3'}
-            ="#{t(:scholarship_count, :count => @scholarships_count)}"
+            ="#{t(:scholarship_count, :count => @scholarships.size)}"
 
         %tr
           %td
@@ -97,8 +97,4 @@
               %a{ :href=>scholarship.bbaf_url}
                 =scholarship.name
             %td=scholarship.cycle
-
-        %tr
-          %td{:colspan => '3', :style => "text-align:right;"}= paginate @scholarships
-
 

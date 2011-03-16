@@ -4,9 +4,7 @@ class ScholarshipsController < ApplicationController
   end
 
   def search
-    scholarships_query  = ScholarshipsHelper.execute(params)
-    @scholarships_count = scholarships_query.size
-    @scholarships = scholarships_query.page(params[:page])
+    @scholarships  = ScholarshipsHelper.execute(params)
     @selected_cycles = params[:cycles] || {}
     @selected_types = params[:types] || {}
 

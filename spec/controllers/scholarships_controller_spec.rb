@@ -37,10 +37,6 @@ describe ScholarshipsController do
         lambda{post :search, :types => {:aboriginal => 'aboriginal' }}.should_not raise_error
       end
 
-      it "should assign 4 as @scholarship_count when there are 4 scholarships" do
-        post :search
-        assigns(:scholarships_count).should be_equal 4
-      end
     end
 
     describe "filtering criteria" do
