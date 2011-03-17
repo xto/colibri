@@ -3,7 +3,7 @@
     %td{:colspan => '3'}
       #info_request
         =label_tag('requester_address', t(:enter_email))
-        =text_field_tag('requester_address', '', :id=> nil)
+        =text_field_tag('requester_address', '', :id=> "requester_address")
         =submit_tag(t(:request_info_button))
 
   %tr{:id => "table_header" }

@@ -103,40 +103,45 @@ h4.nth_header {
   margin-left: 5px;
 }
 
-/* line 108, ../../../app/stylesheets/default.scss */
+/* line 107, ../../../app/stylesheets/default.scss */
+#requester_address {
+  width: 50%;
+}
+
+/* line 112, ../../../app/stylesheets/default.scss */
 #scholarship_list table {
   width: 645px;
   border: none;
 }
 
-/* line 114, ../../../app/stylesheets/default.scss */
+/* line 118, ../../../app/stylesheets/default.scss */
 .fade_in_fade_out {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-/* line 119, ../../../app/stylesheets/default.scss */
+/* line 123, ../../../app/stylesheets/default.scss */
 #table_header {
   text-align: center;
 }
 
-/* line 123, ../../../app/stylesheets/default.scss */
+/* line 127, ../../../app/stylesheets/default.scss */
 tr.scholarship {
   padding-top: 12312312px;
   padding-bottom: 12px;
 }
 
-/* line 128, ../../../app/stylesheets/default.scss */
+/* line 132, ../../../app/stylesheets/default.scss */
 .scholarship_odd {
   background-color: #ffffff;
 }
 
-/* line 132, ../../../app/stylesheets/default.scss */
+/* line 136, ../../../app/stylesheets/default.scss */
 .scholarship_even {
   background-color: #e6e6fa;
 }
 
-/* line 136, ../../../app/stylesheets/default.scss */
+/* line 140, ../../../app/stylesheets/default.scss */
 .info_button {
   vertical-align: top;
   background-color: white;
