@@ -51,3 +51,5 @@ en:
     zero: "No scholarship found"
     one: "One scholarship found"
     other: "%{count} scholarships found"
+  all_cycles: "All Cycles"
+  all_types: "All Types"

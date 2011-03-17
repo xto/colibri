@@ -1,8 +1,8 @@
 -content_for :inline_script do
   :javascript
     $(document).ready(function(){
-      make_collapsable("#cycles");
-      make_collapsable("#types");
+      make_collapsable_option_group("cycles");
+      make_collapsable_option_group("types");
       $("input.filter_criteria").click(
         function(){
           $('#filter_form').submit();
@@ -21,9 +21,13 @@
       #cycles_header{:class => 'filter_category_top'}
         %h4{:class => 'filter_category_header expanded'}=t(:cycles)
       #cycles{:class => 'filters'}
+        =radio_button_tag("all_cycles","0", true, :id=> 'all_cycles', :class => 'filter_criteria')
+        =label_tag("all_cycles",t(:all_cycles))
+        %br
+
         -Scholarship::AVAILABLE_CYCLES.each do |cycle, value|
-          = check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?, :class=> 'filter_criteria')
-          = label_tag("cycles[#{cycle}]",t(cycle))
+          =check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?, :class=> 'filter_criteria cycles_option')
+          =label_tag("cycles[#{cycle}]",t(cycle))
           %br
 
       #cycles_bottom{:class => 'filter_category_bottom'}
@@ -32,8 +36,12 @@
       #types_header{:class => 'filter_category_top'}
         %h4{:class => 'filter_category_header nth_header expanded'}=t(:types)
       #types{:class => 'filters'}
+        =radio_button_tag("all_types","0", true, :id=> 'all_types', :class => 'filter_criteria')
+        =label_tag("all_types",t(:all_types))
+        %br
+
         -Scholarship::AVAILABLE_TYPES.each do |type|
-          =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?, :class => 'filter_criteria')
+          =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?, :class => 'filter_criteria types_option')
           =label_tag("types[#{type}]", t(type))
           %br
 

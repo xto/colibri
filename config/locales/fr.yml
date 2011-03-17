@@ -50,3 +50,5 @@ fr:
     zero: "Aucune bourse trouvée"
     one: "Une bourse trouvée"
     other: "%{count} bourses trouvées"
+  all_cycles: "Tous les cycles"
+  all_types: "Tous les types"

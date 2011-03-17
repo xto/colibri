@@ -20,20 +20,20 @@ end
 
 When /^I search all scholarships$/ do
   visit path_to("the scholarship directory")
-  click_button(I18n.t(:filter))
+
 end
 
 When /^I search the scholarships of first cycle$/ do
   visit path_to("the scholarship directory")
   check("cycles[first_cycle]")
-  click_button(I18n.t(:filter))
+
 end
 
 When /^I search for the scholarships for Aboriginal people of the 1st cycle$/ do
   visit path_to("the scholarship directory")
   check("cycles[first_cycle]")
   check("types[aboriginal]")
-  click_button(I18n.t(:filter))
+
 end
 
 
