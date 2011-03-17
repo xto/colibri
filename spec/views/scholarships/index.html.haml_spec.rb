@@ -8,6 +8,12 @@ describe "scholarships/index.html.haml" do
       assign :selected_types, {}
     end
 
+    it "should have a button to remote search" do
+      render
+
+      view_content_for(:colonneGauche).should have_selector("input", :value => I18n.t(:filter), :type => 'submit')
+    end
+
     it "should have a label for each cycle checkbox" do
       render
 

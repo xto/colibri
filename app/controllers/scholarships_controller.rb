@@ -1,14 +1,6 @@
 class ScholarshipsController < ApplicationController
   def index
-    redirect_to :action => 'search'
-  end
-
-  def search
-    @scholarships  = ScholarshipsHelper.execute(params)
-    @selected_cycles = params[:cycles] || {}
-    @selected_types = params[:types] || {}
-
-    render :template => 'scholarships/index'
+    execute_query(params)
   end
 
   def scholarship_info_request
@@ -16,4 +8,12 @@ class ScholarshipsController < ApplicationController
     UserMailer.scholarship_info_request(params[:requester_address],scholarships).deliver
     redirect_to :action => 'index'
   end
+
+  private
+  def execute_query(params)
+    @scholarships = ScholarshipsHelper.execute(params)
+    @selected_cycles = params[:cycles] || {}
+    @selected_types = params[:types] || {}
+  end
+
 end

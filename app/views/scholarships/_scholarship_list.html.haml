@@ -1,0 +1,20 @@
+%table
+  %tr
+    %td{:colspan => '3'}
+      #info_request
+        =label_tag('requester_address', t(:enter_email))
+        =text_field_tag('requester_address', '', :id=> nil)
+        =submit_tag(t(:request_info_button))
+
+  %tr{:id => "table_header" }
+    %th{:colspan=>'2'}=t(:name)
+    %th= t(:cycle)
+  -@scholarships.each do |scholarship|
+    %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
+      %td{:class => "info_button"}
+        =check_box_tag("selected_scholarships[#{scholarship.seq}]", nil, false)
+        //
+      %td
+        %a{ :href=>scholarship.bbaf_url}
+          =scholarship.name
+      %td=scholarship.cycle

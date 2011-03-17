@@ -3,19 +3,26 @@
     $(document).ready(function(){
       make_collapsable("#cycles");
       make_collapsable("#types");
+      $("input.filter_criteria").click(
+        function(){
+          $('#filter_form').submit();
+        }
+      );
+
     });
 
 
 -content_for :colonneGauche do
   .wraperGauche
-    = form_tag('/scholarships/search') do
-      #submit_button
-        =submit_tag(t(:filter), :id => 'filter_button')
+    #filter_count
+      %span="#{t(:scholarship_count, :count => @scholarships.size)}"
+    
+    = form_tag('/scholarships',:remote => true, :method => :get, :id => 'filter_form') do
       #cycles_header{:class => 'filter_category_top'}
         %h4{:class => 'filter_category_header expanded'}=t(:cycles)
       #cycles{:class => 'filters'}
         -Scholarship::AVAILABLE_CYCLES.each do |cycle, value|
-          = check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?)
+          = check_box_tag("cycles[#{cycle}]" , value, !@selected_cycles["#{cycle}"].nil?, :class=> 'filter_criteria')
           = label_tag("cycles[#{cycle}]",t(cycle))
           %br
 
@@ -26,7 +33,7 @@
         %h4{:class => 'filter_category_header nth_header expanded'}=t(:types)
       #types{:class => 'filters'}
         -Scholarship::AVAILABLE_TYPES.each do |type|
-          =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?)
+          =check_box_tag("types[#{type}]" , type, !@selected_types["#{type}"].nil?, :class => 'filter_criteria')
           =label_tag("types[#{type}]", t(type))
           %br
 
@@ -37,28 +44,4 @@
 -content_for :colonneCentreSection do
   %form{:id => "form_for_scholarship_info", :action => '/scholarships/scholarship_info_request', :method => "post"}
     #scholarship_list
-      %table
-        %tr
-          %td{:id=> 'filter_count',:colspan=>'3'}
-            ="#{t(:scholarship_count, :count => @scholarships.size)}"
-
-        %tr
-          %td{:colspan => '3'}
-            #info_request
-              =label_tag('requester_address', t(:enter_email))
-              =text_field_tag('requester_address', '', :id=> nil)
-              =submit_tag(t(:request_info_button))
-
-        %tr{:id => "table_header" }
-          %th{:colspan=>'2'}=t(:name)
-          %th= t(:cycle)
-        -@scholarships.each do |scholarship|
-          %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
-            %td{:class => "info_button"}
-              =check_box_tag("selected_scholarships[#{scholarship.seq}]", nil, false)
-              //
-            %td
-              %a{ :href=>scholarship.bbaf_url}
-                =scholarship.name
-            %td=scholarship.cycle
-
+      =render :partial => "scholarship_list"

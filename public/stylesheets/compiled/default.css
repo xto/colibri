@@ -34,26 +34,19 @@ span.yellow_bar {
   font-weight: bold;
 }
 
-/* line 37, ../../../app/stylesheets/default.scss */
-#filter_count {
-  text-align: left;
-  font-weight: bold;
-}
-
-/* line 46, ../../../app/stylesheets/default.scss */
+/* line 38, ../../../app/stylesheets/default.scss */
 #colonneGauche {
   float: left;
   width: 250px;
 }
 
-/* line 51, ../../../app/stylesheets/default.scss */
-#filter_button {
-  margin-left: 70%;
-  font-size: 16px;
-  font-weight: bold;
+/* line 43, ../../../app/stylesheets/default.scss */
+#filter_count {
+  text-align: center;
+  font-size: 12px;
 }
 
-/* line 59, ../../../app/stylesheets/default.scss */
+/* line 50, ../../../app/stylesheets/default.scss */
 .filter_category_header, .collapsed, .expanded {
   background-position: right 2px;
   background-repeat: no-repeat;
@@ -63,13 +56,13 @@ span.yellow_bar {
   margin-bottom: 0px;
 }
 
-/* line 68, ../../../app/stylesheets/default.scss */
+/* line 59, ../../../app/stylesheets/default.scss */
 h4.nth_header {
   margin-top: 4px;
   -webkit-margin-before: 4px;
 }
 
-/* line 73, ../../../app/stylesheets/default.scss */
+/* line 64, ../../../app/stylesheets/default.scss */
 .filters {
   background-color: #96afc7;
   color: #00008b;
@@ -77,70 +70,70 @@ h4.nth_header {
   font-weight: bold;
 }
 
-/* line 83, ../../../app/stylesheets/default.scss */
+/* line 74, ../../../app/stylesheets/default.scss */
 .filter_category_bottom {
   background-image: url(/images/filter_header_bottom.gif);
   background-repeat: no-repeat;
   margin-bottom: 2px;
 }
 
-/* line 89, ../../../app/stylesheets/default.scss */
+/* line 80, ../../../app/stylesheets/default.scss */
 .filter_category_top {
   background-image: url(/images/filter_header_top.gif);
   background-repeat: no-repeat;
 }
 
-/* line 94, ../../../app/stylesheets/default.scss */
+/* line 85, ../../../app/stylesheets/default.scss */
 .collapsed {
   background-image: url(/images/arrow_filter_header_collapsed.png);
 }
 
-/* line 99, ../../../app/stylesheets/default.scss */
+/* line 90, ../../../app/stylesheets/default.scss */
 .expanded {
   background-image: url(/images/arrow_filter_header_expanded.png);
 }
 
-/* line 107, ../../../app/stylesheets/default.scss */
+/* line 98, ../../../app/stylesheets/default.scss */
 #colonneCentreSection {
   min-width: 440px;
   float: left;
   margin-left: 5px;
 }
 
-/* line 114, ../../../app/stylesheets/default.scss */
+/* line 105, ../../../app/stylesheets/default.scss */
 #scholarship_list table {
   width: 645px;
   border: none;
 }
 
-/* line 120, ../../../app/stylesheets/default.scss */
+/* line 111, ../../../app/stylesheets/default.scss */
 .fade_in_fade_out {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-/* line 125, ../../../app/stylesheets/default.scss */
+/* line 116, ../../../app/stylesheets/default.scss */
 #table_header {
   text-align: center;
 }
 
-/* line 129, ../../../app/stylesheets/default.scss */
+/* line 120, ../../../app/stylesheets/default.scss */
 tr.scholarship {
   padding-top: 12312312px;
   padding-bottom: 12px;
 }
 
-/* line 134, ../../../app/stylesheets/default.scss */
+/* line 125, ../../../app/stylesheets/default.scss */
 .scholarship_odd {
   background-color: #ffffff;
 }
 
-/* line 138, ../../../app/stylesheets/default.scss */
+/* line 129, ../../../app/stylesheets/default.scss */
 .scholarship_even {
   background-color: #e6e6fa;
 }
 
-/* line 142, ../../../app/stylesheets/default.scss */
+/* line 133, ../../../app/stylesheets/default.scss */
 .info_button {
   vertical-align: top;
   background-color: white;

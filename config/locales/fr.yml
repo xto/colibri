@@ -47,6 +47,6 @@ fr:
       next: "Suivant"
       previous: "Précédent"
   scholarship_count:
-    zero: "Aucune bourse ne correspond aux critères de filtre"
-    one: "Une bourse correspond aux critères de filtre"
-    other: "%{count} bourses correspondent aux critères de filtre"
+    zero: "Aucune bourse trouvée"
+    one: "Une bourse trouvée"
+    other: "%{count} bourses trouvées"

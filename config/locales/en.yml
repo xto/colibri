@@ -47,4 +47,7 @@ en:
     pagination:
       next: "Next"
       previous: "Previous"
-  scholarship_count: "Results:"
+  scholarship_count:
+    zero: "No scholarship found"
+    one: "One scholarship found"
+    other: "%{count} scholarships found"

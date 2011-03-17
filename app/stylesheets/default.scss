@@ -34,25 +34,16 @@ span.yellow_bar{
     }
 }
 
-#filter_count{
-    
-    text-align:left;
-    font:{
-        weight:bold;
-    }
-}
-
 // Left Column
 #colonneGauche{
     float: left;
     width: 250px;
 }
 
-#filter_button{
-    margin-left:70%;
+#filter_count{
+    text-align:left;
     font:{
-        size: 16px;
-        weight: bold;
+        size: 12px;
     }
 }
 
