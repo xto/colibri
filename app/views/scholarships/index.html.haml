@@ -14,9 +14,6 @@
 
 -content_for :colonneGauche do
   .wraperGauche
-    #filter_count
-      %span="#{t(:scholarship_count, :count => @scholarships.size)}"
-    
     = form_tag('/scholarships',:remote => true, :method => :get, :id => 'filter_form') do
       #cycles_header{:class => 'filter_category_top'}
         %h4{:class => 'filter_category_header expanded'}=t(:cycles)
