@@ -106,7 +106,7 @@ describe "scholarships/index.html.haml" do
       assign :scholarships, []
       render
 
-      view_content_for(:colonneCentreSection).should have_selector('tr', :id=>'no_scholarship')
+      view_content_for(:colonneCentreSection).should_not have_selector('table')
     end
 
     it "should display the proper message when no scholarships are found" do
