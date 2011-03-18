@@ -1,6 +1,7 @@
 -content_for :inline_script do
   :javascript
     $(document).ready(function(){
+      add_form_watcher("form_for_scholarship_info");
       make_collapsable_option_group("cycles");
       make_collapsable_option_group("types");
       $("input.filter_criteria").click(
@@ -51,6 +52,6 @@
     #info_request
       =label_tag('requester_address', t(:enter_email))
       =text_field_tag('requester_address', '', :id=> "requester_address")
-      =submit_tag(t(:request_info_button))
+      =submit_tag(t(:request_info_button), :disabled => true)
     #scholarship_list
       =render :partial => "scholarship_list"

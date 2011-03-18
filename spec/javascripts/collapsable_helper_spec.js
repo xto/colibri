@@ -1,6 +1,4 @@
 describe("collapsable_helper", function() {
-
-
   var cycle_criteria
 
   beforeEach(function() {
