@@ -45,11 +45,15 @@
           =label_tag("types[#{type}]", t(type))
           %br
 
-      #types_bottom{:class => 'filter_category_bottom'}
+      #tyclasspes_bottom{:class => 'filter_category_bottom'}
         %span &nbsp;
 
 
 -content_for :colonneCentreSection do
-  %form{:id => "form_for_scholarship_info", :action => '/scholarships/scholarship_info_request', :method => "post"}
+  = form_tag('/scholarships/scholarship_info_request',:method => :post, :id => 'form_for_scholarship_info') do
+    #info_request
+      =label_tag('requester_address', t(:enter_email))
+      =text_field_tag('requester_address', '', :id=> "requester_address")
+      =submit_tag(t(:request_info_button))
     #scholarship_list
       =render :partial => "scholarship_list"

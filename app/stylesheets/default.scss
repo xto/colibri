@@ -31,6 +31,7 @@ span.yellow_bar{
     color:#990000;
     font:{
         weight:bold;
+        size: 13px;
     }
     margin-bottom: 10px;
 }
@@ -100,7 +101,7 @@ h4.nth_header{
 
 #colonneCentreSection{
     min-width:440px;
-    float: left;
+    float: right;
     margin-left:5px;
 }
 
@@ -108,9 +109,12 @@ h4.nth_header{
     width:50%;
 }
 
+#form_for_scholarship_info{
+    width:645px;
+}
+
 #scholarship_list{
     table{
-        width:645px;
         border:none;
     }
 }
@@ -137,8 +141,15 @@ tr.scholarship{
     background-color:#e6e6fa;
 }
 
-.info_button{
-    vertical-align:top;
-    background-color:white;
+#info_request{
+    margin-top:6px;
+
+    font:{
+        size: 13px;
+    }
+    .info_button{
+        vertical-align:top;
+        background-color:white;
+    }
 }
 
