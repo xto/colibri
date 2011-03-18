@@ -4,8 +4,12 @@ class ScholarshipsController < ApplicationController
   end
 
   def scholarship_info_request
-    scholarships = params[:selected_scholarships].keys.collect{|id| Scholarship.find_by_seq(id)}
-    UserMailer.scholarship_info_request(params[:requester_address],scholarships).deliver
+    if !params[:selected_scholarships].nil? && !params[:requester_address].empty?
+      scholarships = params[:selected_scholarships].keys.collect{|id| Scholarship.find_by_seq(id)}
+      UserMailer.scholarship_info_request(params[:requester_address],scholarships).deliver
+    else
+      flash[:email_error] = t(:email_error)
+    end
     redirect_to :action => 'index'
   end
 

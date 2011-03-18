@@ -157,3 +157,10 @@ tr.scholarship {
   vertical-align: top;
   background-color: white;
 }
+
+/* line 157, ../../../app/stylesheets/default.scss */
+.error_message {
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}

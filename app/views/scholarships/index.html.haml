@@ -1,7 +1,6 @@
 -content_for :inline_script do
   :javascript
     $(document).ready(function(){
-      add_form_watcher("form_for_scholarship_info");
       make_collapsable_option_group("cycles");
       make_collapsable_option_group("types");
       $("input.filter_criteria").click(
@@ -50,8 +49,12 @@
 -content_for :colonneCentreSection do
   = form_tag('/scholarships/scholarship_info_request',:method => :post, :id => 'form_for_scholarship_info') do
     #info_request
+      -unless flash[:email_error].nil?
+        %span{:class => "error_message"}
+          =flash[:email_error]
+        %br
       =label_tag('requester_address', t(:enter_email))
       =text_field_tag('requester_address', '', :id=> "requester_address")
-      =submit_tag(t(:request_info_button), :disabled => true)
+      =submit_tag(t(:request_info_button))
     #scholarship_list
       =render :partial => "scholarship_list"
