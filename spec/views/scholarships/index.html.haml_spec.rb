@@ -93,4 +93,29 @@ describe "scholarships/index.html.haml" do
       end
     end
   end
+
+  describe "scholarship_list" do
+    before(:each) do
+      @bourse_aborigene_cycle_1 = Scholarship.create(:name => "Bourse cycle 1", :cycle => 1, :seq => '1')
+      @bourse_cycle_2 = Scholarship.create(:name => "Bourse cycle 2", :cycle => 2, :seq => '2')
+      assign :selected_cycles, {}
+      assign :selected_types, {}
+    end
+
+    it "should display the proper message when no scholarships are found" do
+      assign :scholarships, []
+      render
+
+      view_content_for(:colonneCentreSection).should have_selector('tr', :id=>'no_scholarship')
+    end
+
+    it "should display the proper message when no scholarships are found" do
+      assign :scholarships, Scholarship.all
+      render
+
+      view_content_for(:colonneCentreSection).should have_selector('tr', :class=>'scholarship scholarship_odd')
+      view_content_for(:colonneCentreSection).should have_selector('tr', :class=>'scholarship scholarship_even')
+    end
+
+  end
 end

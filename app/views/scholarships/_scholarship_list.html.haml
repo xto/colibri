@@ -5,12 +5,18 @@
   %tr{:id => "table_header" }
     %th{:colspan=>'2'}=t(:name)
     %th= t(:cycle)
-  -@scholarships.each do |scholarship|
-    %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
-      %td{:class => "info_button"}
-        =check_box_tag("selected_scholarships[#{scholarship.seq}]", nil, false)
-        //
-      %td
-        %a{ :href=>scholarship.bbaf_url}
-          =scholarship.name
-      %td=scholarship.cycle
+  -if @scholarships.size > 0
+    -@scholarships.each do |scholarship|
+      %tr{ :id=>"seq_#{scholarship.seq}", :class => "scholarship #{cycle( 'scholarship_odd', 'scholarship_even')}"}
+        %td{:class => "info_button"}
+          =check_box_tag("selected_scholarships[#{scholarship.seq}]", nil, false)
+          //
+        %td
+          %a{ :href=>scholarship.bbaf_url}
+            =scholarship.name
+        %td=scholarship.cycle
+  -else
+    %tr{:id => 'no_scholarship'}
+      %td{:colspan => '3'}
+        %span
+          =t(:no_scholarships_found)

@@ -53,3 +53,4 @@ fr:
   all_cycles: "Tous les cycles"
   all_types: "Tous les types"
   email_error: "Vous devez entrer votre courriel et sélectionner au moins une bourse"
+  no_scholarships_found: "Aucune bourse ne correspond à vos critères."
